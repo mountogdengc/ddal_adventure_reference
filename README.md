@@ -70,7 +70,21 @@ DDAL Adventure Reference/
 
 ---
 
-## Basic Usage
+## Web UI (recommended)
+
+Start the local web server:
+```
+python app.py
+```
+Then open **[http://localhost:5001](http://localhost:5001)** in your browser.
+
+The UI shows a live status table for every adventure, lets you trigger any
+pipeline step with a button click, and streams the log output in real time.
+Requires `pip install flask` (included in the setup steps above).
+
+---
+
+## Command-Line Usage
 
 **Full pipeline — process everything new, skip existing outputs:**
 ```

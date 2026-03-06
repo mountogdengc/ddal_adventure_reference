@@ -33,11 +33,18 @@ Log files are written to:  logs/process_adventures_YYYY-MM-DD_HH-MM-SS.log
 import os
 import sys
 import re
+import time
 import subprocess
 import argparse
 import logging
 from pathlib import Path
 from datetime import datetime
+
+
+def _elapsed(start: float) -> str:
+    """Return a human-readable elapsed time string, e.g. '1m 23s' or '45s'."""
+    secs = int(time.monotonic() - start)
+    return "%dm %ds" % (secs // 60, secs % 60) if secs >= 60 else "%ds" % secs
 
 # -- Dependency check: pdfplumber (required) -----------------------------------
 try:
@@ -297,6 +304,9 @@ def md_to_data(md_path: Path, dry_run: bool = False) -> tuple[bool, str, Path | 
         return False, "Could not read %s: %s" % (md_path.name, exc), None
 
     try:
+        print("    calling Claude API (%s) -- this takes 30-90s, please wait..." % _AI_MODEL,
+              flush=True)
+        t0 = time.monotonic()
         client = _anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model      = _AI_MODEL,
@@ -313,6 +323,7 @@ def md_to_data(md_path: Path, dry_run: bool = False) -> tuple[bool, str, Path | 
                 }
             ],
         )
+        print("    Claude responded in %s" % _elapsed(t0), flush=True)
     except _anthropic.APIError as exc:
         return False, "Claude API error for %s: %s" % (md_path.name, exc), None
 
@@ -345,7 +356,7 @@ def md_to_data(md_path: Path, dry_run: bool = False) -> tuple[bool, str, Path | 
     tokens_used = response.usage.input_tokens + response.usage.output_tokens
     return (
         True,
-        "Created %s  (%s tokens used)" % (out_name, "{:,}".format(tokens_used)),
+        "Created %s  (%s tokens, %s)" % (out_name, "{:,}".format(tokens_used), _elapsed(t0)),
         out_path,
     )
 
@@ -392,6 +403,8 @@ def data_to_docx(data_file: Path, dry_run: bool = False) -> tuple[bool, str]:
         return True, "[DRY RUN] Would build " + docx_name
 
     try:
+        print("    running Node.js builder...", flush=True)
+        t0 = time.monotonic()
         result = subprocess.run(
             ["node", "build_al_ref_CONFIG.js", str(data_file)],
             cwd            = ROOT,
@@ -404,7 +417,7 @@ def data_to_docx(data_file: Path, dry_run: bool = False) -> tuple[bool, str]:
             # Prefer stderr for the error text; fall back to stdout
             err = (result.stderr or result.stdout).strip()
             return False, "Node.js error for %s: %s" % (data_file.name, err)
-        return True, "Created " + docx_name
+        return True, "Created %s  (%s)" % (docx_name, _elapsed(t0))
 
     except FileNotFoundError:
         return False, "node not found -- is Node.js installed and on PATH?"
@@ -608,9 +621,11 @@ def docx_to_pdf(docx_path: Path, dry_run: bool = False) -> tuple[bool, str]:
         )
 
     try:
+        print("    exporting via Word (may take a few seconds)...", flush=True)
+        t0 = time.monotonic()
         # convert() accepts str paths; it drives Word silently on Windows
         _docx2pdf.convert(str(docx_path), str(pdf_path))
-        return True, "Created " + pdf_path.name
+        return True, "Created %s  (%s)" % (pdf_path.name, _elapsed(t0))
     except Exception as exc:
         return False, "PDF export failed for %s: %s" % (docx_path.name, exc)
 
