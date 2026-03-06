@@ -8,52 +8,52 @@ const DATA = {
   location: "Mulmaster",
   reward: "4 advancement checkpoints and 4 treasure checkpoints",
 
-  background: "In the devastated city of Mulmaster, the nephew of Zor Doran Hightower has been found brutally murdered in the sewers beneath the city. The noble houses of the Blades are pointing fingers at one another while a shadowy new crime network called the Silver Skulls has emerged, employing Thayan wizards to further their agenda. The party is hired by Zor Hightower to investigate the murder scene in the sewers and follow clues to uncover the truth.",
+  background: "In the devastated city of Mulmaster, the nephew of Zor Doran Hightower has been found brutally murdered in the sewers. The noble houses of the Blades are at each other's throats with accusations while a mysterious new criminal organization called the Silver Skulls operates in the shadows, and Thayan Red Wizards have increased their presence in the city. The party is hired by Zor Hightower at the Wave and Wink tavern to investigate the murder scene and uncover the truth.",
 
-  keyFacts: "The Silver Skulls are a new crime network operating in Mulmaster; their leader possesses an ability that induces paranoia in a several-mile radius within the city walls. Ravek Tillancer, the Thayan wizard encountered in the sewers, was hired by the Silver Skulls to recover a lost satchel (the Heward's Handy Haversack in the cistern). The adventure is the first in a series, with the mystery continuing in SKULL01-02. The Silver Skulls' leader Arturo appears at the conclusion and promises to contact the party later.",
+  keyFacts: "The Silver Skulls are a new crime network operating in Mulmaster; their leader can induce a sensation of paranoia in a several-mile radius. A Thayan conjurer named Ravek Tillancer was hired by the Silver Skulls to recover a haversack lost in the sewers. The Silver Skulls' leader is named Arturo (a master thief) and operates from an abandoned warehouse marked with a silver circle crossed by an 'X'. This is the first module in the Silver Skulls Legacy series, continuing in SKULL01-02.",
 
   scenes: [
     {
       name: "Part 1: The Wave and Wink",
       time: "~20 min",
       goal: "Meet Zor Doran Hightower and learn about the murder of his nephew",
-      outcome: "Party receives directions to the sewer cistern where the body was found and is asked to investigate and report back by midnight"
+      outcome: "Party receives directions to the sewer cistern where the body was found and agrees to investigate and report back by midnight"
     },
     {
-      name: "Part 2, Section 1: The Cistern (Froghemoth)",
+      name: "Part 2 Section 1: The Cistern - Froghemoth",
       time: "~25 min",
-      goal: "Investigate the cistern where the body was found and recover any clues",
-      outcome: "Party fights a froghemoth lurking in the cistern and recovers a Heward's Handy Haversack containing silver skull tokens and a potion of healing"
+      goal: "Investigate the cistern where the body was found and recover evidence",
+      outcome: "Party defeats the froghemoth and recovers a Heward's Handy Haversack containing silver skull tokens and a potion of healing"
     },
     {
-      name: "Part 2a: Fancy Meeting You Here (Thayan Encounter)",
+      name: "Part 2a: Fancy Meeting You Here - Thayan Encounter",
       time: "~25 min",
-      goal: "Confront or evade Ravek Tillancer and his veteran escort who are also searching the sewers",
-      outcome: "Party defeats or drives off the Thayan group and recovers a fake Brotherhood of the Cloak token and a scroll with directions to the Silver Skulls warehouse"
+      goal: "Deal with Ravek Tillancer and his veterans who are also searching the sewers",
+      outcome: "Party defeats or drives off the Thayans and recovers a fake Brotherhood of the Cloak token and a scroll with directions to a warehouse"
     },
     {
-      name: "Part 2b: Waylaid Again (Refugee Encounter)",
+      name: "Part 2b: Waylaid Again - Refugee Encounter",
       time: "~25 min",
-      goal: "Interact with the sewer refugees and learn additional information about suspicious activity",
-      outcome: "Party learns about red-robed figures, shadowy figures with silver skull armbands, and increased assassin activity; may earn the Friend of the Fallen story award"
+      goal: "Interact with sewer refugees led by Zavian Hauhtaon and gather intelligence",
+      outcome: "Party learns about increased Thayan and Silver Skull activity in the sewers; may earn Friend of the Fallen story award"
     },
     {
-      name: "Part 3, Section 1: Trust the Guards?",
+      name: "Part 3 Section 1: Trust the Guards?",
       time: "~25 min",
-      goal: "Navigate past or deal with the City Guard patrol near the Silver Skulls warehouse",
-      outcome: "Party either sneaks past, talks their way through, bribes, or fights the City Guard to reach the warehouse"
+      goal: "Navigate past the City Guard near the Silver Skulls warehouse",
+      outcome: "Party either sneaks past, talks their way through, bribes, or fights the City Guard patrol"
     },
     {
-      name: "Part 3, Section 2: Agents of the Skull",
+      name: "Part 3 Section 2: Agents of the Skull",
       time: "~25 min",
       goal: "Infiltrate the Silver Skulls warehouse and confront their agents",
-      outcome: "Party encounters Arturo the master thief and his spies; combat or negotiation ensues before Arturo escapes"
+      outcome: "Party encounters Arturo and Silver Skull spies; Arturo flees and promises to contact them later"
     },
     {
       name: "Conclusion",
       time: "~10 min",
       goal: "Report findings to Zor Hightower at the Wave and Wink",
-      outcome: "Arturo contacts the party promising a future meeting; the mystery continues in SKULL01-02"
+      outcome: "Party shares what they learned; the mystery continues in SKULL01-02"
     }
   ],
 
@@ -61,186 +61,186 @@ const DATA = {
     {
       name: "Part 1: The Wave and Wink",
       time: "~20 min",
-      setting: "The Wave and Wink dance hall, a bawdy tavern near the Tower of the Blades in northern Mulmaster",
-      trigger: "The party arrives at the tavern following their adventure hook",
-      creatures: "Zor Doran Hightower (quest giver, noble contact)",
-      tactics: "Hightower is forthcoming with information but is prideful and agitated. He provides directions to the sewer cistern.",
-      loot: "None",
-      dmnote: "Hightower asks the party to report back at midnight. Emphasize his frustration with the City Guard's incompetence and his suspicion of the Thayans and other Blade houses."
+      setting: "The Wave and Wink, a bawdy dance hall near the Tower of the Blades in northern Mulmaster",
+      trigger: "Party arrives at the tavern and approaches Zor Hightower",
+      creatures: "Zor Doran Hightower (noble, quest giver)",
+      tactics: "Hightower is trying to be covert but fails at blending in. He is prideful but caring and driven by devotion to his family.",
+      loot: "Directions to the sewer cistern where the body was found",
+      dmnote: "Hightower is frustrated with the incompetent City Guard who lost his nephew's body. He asks the party to return by midnight."
     },
     {
-      name: "Part 2, Section 1: The Cistern (Froghemoth)",
+      name: "Part 2 Section 1: The Cistern - Froghemoth",
       time: "~25 min",
-      setting: "A large cylindrical cistern deep in the sewers, crisscrossed by walkways above murky 2-foot-deep water; light filters from a rusted grate above",
+      setting: "A large cylindrical cistern in the sewers beneath Mulmaster, crisscrossed by walkways above murky 2-foot-deep water",
       trigger: "A character enters the water or the last party member reaches the center of the cistern walkway",
-      creatures: "1 Froghemoth (CR 10), lurking submerged near the western wall",
-      tactics: "The froghemoth attacks from underwater, using tentacles to drag victims under and drown them. Reference underwater combat rules from the Player's Handbook.",
-      loot: "Heward's Handy Haversack containing two dozen silver skull tokens and a potion of healing, found in a rucksack 20 ft underwater near the eastern wall",
-      dmnote: "Passive Perception DC 15 to spot the coins and rucksack underwater. The middle 5 feet of the deeper tunnels is difficult terrain at 2 feet of water depth."
+      creatures: "1 froghemoth (CR 10) lurking submerged near the western wall",
+      tactics: "The froghemoth attacks while submerged, uses tentacle attacks to drag victims underwater to drown them. Reference underwater combat rules in PHB.",
+      loot: "Heward's Handy Haversack containing two dozen silver skull tokens and a potion of healing, found in a rucksack 20 ft below the water surface near the eastern wall",
+      dmnote: "Passive Perception DC 15 to spot the coins and rucksack underwater. The middle 5 feet of tunnels approaching the cistern is difficult terrain due to 2-foot-deep water."
     },
     {
-      name: "Part 2a: Fancy Meeting You Here (Thayan Encounter)",
+      name: "Part 2a: Fancy Meeting You Here - Thayan Encounter",
       time: "~25 min",
-      setting: "A tunnel intersection deeper in the sewers, lit by a torch wedged into the wall",
-      trigger: "Party hears splashing and low voices (passive Perception DC 20 to hear early); encounter begins when the party rounds the curve",
-      creatures: "Ravek Tillancer (Conjurer, CR 6) and 5 Veterans (CR 3 each)",
-      tactics: "Ravek begins with mage armor active. He uses fireball on clustered parties, otherwise uses veterans as cover for ranged spell attacks. Veterans form a defensive line focusing on 1-2 party members. Ravek flees below half HP using benign transportation and misty step. Veterans fight to the death.",
-      loot: "Fake Brotherhood of the Cloak token (DC 15 Intelligence/Investigation to identify as fake); scroll with directions and crude map to the Silver Skulls warehouse marked with a silver circle and X",
-      dmnote: "DC 17 Intelligence (History/Arcana) to identify the Thayan conjuration tattoo. DC 12 Wisdom (Insight) to detect Ravek's lie about being sent by the City Guard. DC 17 Charisma (Intimidation/Persuasion) to make him back down. Can be set before or after the cistern encounter."
+      setting: "A sewer tunnel intersection deeper in the sewers or on the way back to the surface",
+      trigger: "Party hears splashing and low voices (passive Perception DC 20 to hear early); encountering the Thayan search party",
+      creatures: "Ravek Tillancer (conjurer, CR 6) and 5 veterans (CR 3 each)",
+      tactics: "Ravek begins with mage armor active. If party is clustered, opens with fireball. Uses veterans as cover for ranged spell attacks. Veterans form defensive line focusing on 1-2 party members. Ravek flees below half HP using benign transportation and misty step.",
+      loot: "Fake Brotherhood of the Cloak membership token (DC 15 Intelligence/Investigation to identify as fake); scroll with directions and crude map to Silver Skulls warehouse",
+      dmnote: "DC 17 Intelligence (History or Arcana) to identify the conjuration school tattoo. DC 12 Wisdom (Insight) reveals Ravek's lie about being sent by the City Guard. DC 17 Charisma (Intimidation or Persuasion) to convince him to back down."
     },
     {
-      name: "Part 2b: Waylaid Again (Refugee Encounter)",
+      name: "Part 2b: Waylaid Again - Refugee Encounter",
       time: "~25 min",
-      setting: "A junction where smaller 5-foot tunnels meet the larger main tunnel, in shallower water sections on the way back to the surface",
-      trigger: "Refugees approach cautiously from a branching tunnel as the party backtracks",
-      creatures: "Zavian Hauhtaon (noble refugee, leader) and 12 commoners (refugees, non-combatant)",
-      tactics: "This is NOT a combat encounter. If attacked, most refugees flee; Zavian stands to fight. Use commoner stats if combat occurs.",
-      loot: "None (information only)",
-      dmnote: "DC 13 Charisma (Persuasion) to convince Zavian to share news. Befriending Zavian earns the Friend of the Fallen story award. Encourage roleplay about Phlan and Hillsfar if applicable."
+      setting: "A tunnel juncture where smaller 5-ft tunnels join the larger main tunnel, in the shallower sections",
+      trigger: "Refugees approach cautiously from a branching tunnel as the party passes",
+      creatures: "Zavian Hauhtaon (disgraced noble) and 12 commoners (refugees)",
+      tactics: "Not meant to be combat. If attacked, most flee; Zavian stands and fights to protect his friends. Use commoner stats.",
+      loot: "Information about Thayan and Silver Skull activity in the sewers",
+      dmnote: "DC 13 Charisma (Persuasion) to convince Zavian to share information. Befriending Zavian earns the Friend of the Fallen story award. Encourage roleplay about events in Phlan and Hillsfar."
     },
     {
-      name: "Part 3, Section 1: Trust the Guards?",
+      name: "Part 3 Section 1: Trust the Guards?",
       time: "~25 min",
-      setting: "Near the southwestern city wall of Mulmaster at night, near a watch tower overlooking an abandoned warehouse district; elemental flames provide ambient light",
-      trigger: "As the party approaches the warehouse or tower, 8 guards and 1 knight exit the tower",
-      creatures: "8 Guards (CR 1/8) and 1 Knight (CR 3, captain)",
-      tactics: "The knight inspires his guardsmen via Leadership. All attempt to flee for reinforcements if reduced below half health.",
-      loot: "None",
-      dmnote: "DC 18 group Dexterity (Stealth) check to avoid detection. DC 16 Charisma (Persuasion) if truthful, DC 20 Charisma (Deception/Intimidation) otherwise, or a 20 gp bribe to avoid combat. Use false positive passive Perception checks to build paranoia from the Silver Skulls leader's supernatural ability."
+      setting: "Outer edge of Mulmaster near the city walls, near a watch tower and the Silver Skulls warehouse, at night",
+      trigger: "Party approaches either the warehouse or the tower, causing 8 guards and 1 knight to exit the tower",
+      creatures: "8 guards (CR 1/8 each) and 1 knight (CR 3) - City Guard patrol",
+      tactics: "The knight inspires his guardsmen with Leadership. All attempt to flee for reinforcements if reduced below half health.",
+      loot: "None.",
+      dmnote: "DC 18 group Dexterity (Stealth) to avoid detection. DC 16 Charisma (Persuasion) if truthful, DC 20 Charisma (Deception or Intimidation) otherwise, or a 20 gp bribe to avoid combat. Use paranoia effects: false passive perception checks, phantom sounds and sights from the Silver Skulls leader's ability."
     },
     {
-      name: "Part 3, Section 2: Agents of the Skull",
+      name: "Part 3 Section 2: Agents of the Skull",
       time: "~25 min",
-      setting: "A decrepit warehouse with broken windows and an overgrown yard, marked with a dirty silver circle with an X on the sign",
-      trigger: "Party enters the warehouse; a Silver Skull agent approaches through the opposite doorway",
-      creatures: "Arturo (Master Thief, CR 5) and 5 Spies (CR 1 each)",
-      tactics: "Agents do not want to fight. All fight until half HP then attempt to flee. Arturo tries to bargain after losing 20 HP. He uses cunning action disengage/dash and a spell scroll of teleport as a last resort. Encourage players to listen to Arturo.",
-      loot: "None specified",
-      dmnote: "DC 17 Wisdom (Perception) to notice cobwebs on rafters and movement in the adjoining room. This is not meant to be a challenging fight; the agents prefer negotiation."
+      setting: "An abandoned warehouse on the outskirts of Mulmaster with a silver circle 'X' sign",
+      trigger: "Party enters the warehouse; a Silver Skull agent approaches through the opposite door",
+      creatures: "Arturo (master thief, CR 5) and 5 spies (CR 1 each) - Silver Skull agents",
+      tactics: "Not meant to be a challenging fight. Agents fight to half HP then flee. Arturo tries to bargain after losing 20 HP. He flees below half HP using cunning action disengage/dash and a spell scroll of teleport as last resort.",
+      loot: "None specified.",
+      dmnote: "DC 17 Wisdom (Perception) to notice cobwebs on rafters and movement in the adjoining room. Arturo reappears outside afterward to introduce himself and promise future contact."
     },
     {
       name: "Conclusion",
       time: "~10 min",
-      setting: "The street outside the Wave and Wink, then inside the tavern",
-      trigger: "Party heads back for their midnight meeting with Zor Hightower",
-      creatures: "Arturo (briefly, from shadows) and Zor Doran Hightower",
-      tactics: "Arturo reveals himself from the shadows, introduces himself, and promises future contact before slipping away.",
-      loot: "None",
-      dmnote: "This sets up the sequel SKULL01-02. Let the party relay all their findings to Hightower."
+      setting: "Back at the Wave and Wink tavern",
+      trigger: "Party returns to meet Zor Hightower at midnight as agreed",
+      creatures: "Zor Doran Hightower",
+      tactics: "N/A",
+      loot: "None.",
+      dmnote: "The mystery continues in SKULL01-02. Allow the party to share all they have learned."
     }
   ],
 
   npcs: [
     {
       name: "Zor Doran Hightower",
-      statBlock: "Noble (non-combat NPC) / CR N/A",
+      statBlock: "Noble (not specified) / CR N/A",
       alignment: "LN",
-      wants: "To find the truth behind his nephew's murder and bring justice to those responsible",
-      knows: "The location in the sewers where his nephew's body was found; that the City Guard lost the body; that Thayan presence has increased in Mulmaster; that the noble houses are jockeying for power",
-      voice: "Deep baritone, prideful and regal, struggles to blend in with common folk, passionate about family honor",
+      wants: "To find out who murdered his nephew and bring justice for his family",
+      knows: "The location where his nephew's body was found in the sewers; the City Guard lost the body; there's increased Thayan presence in Mulmaster; the Blade houses are vying for power post-devastation",
+      voice: "Deep baritone, prideful and regal, tries to be covert but can't help his noble bearing. Caring about family above all.",
       quote: "My name is Zor Doran Hightower. I presume you are here to help me?"
     },
     {
       name: "Ravek Tillancer",
       statBlock: "Conjurer / CR 6",
       alignment: "NE",
-      wants: "To recover the lost satchel (Heward's Handy Haversack) from the sewers for the Silver Skulls",
-      knows: "He was hired by the Silver Skulls; the haversack was lost in the sewers; he carries a fake Brotherhood of the Cloak token",
-      voice: "Guarded and evasive, claims to work for the greater good, willing to be intimidated into backing down",
-      quote: "I am here for the greater good. The City Guard asked me to look into this murder."
+      wants: "To recover the haversack from the sewers for the Silver Skulls who hired him",
+      knows: "He was hired by the Silver Skulls; the haversack's location in the sewers; he carries a fake Brotherhood of the Cloak token",
+      voice: "Guarded, deceptive, claims to be working for the greater good but is lying. Willing to fight rather than reveal his true purpose.",
+      quote: "The City Guard asked me to look into this murder. I am here for the greater good."
     },
     {
       name: "Zavian Hauhtaon",
       statBlock: "Commoner / CR 0",
       alignment: "NG",
-      wants: "To protect his fellow refugees and survive in the sewers after the fall of his noble house",
-      knows: "Red-robed Thayans have been prowling the sewers; shadowy figures wear silver skull armbands; many Blades have been hiring assassins; increased traffic by unsavory groups",
-      voice: "Haggard and worn but dignified, speaks softly and cautiously, protective of his people",
-      quote: "Pardon me... How many Blades are left now?"
+      wants: "To protect the refugees sheltering in the sewers and survive",
+      knows: "Red-robed Thayans have been prowling the sewers; shadowy figures with silver skull armbands have been seen; many Blades have been hiring assassins to alter power dynamics in Mulmaster",
+      voice: "Haggard and worn but noble in bearing. Speaks cautiously and protectively of his people. Disappointed by the state of the Blades.",
+      quote: "Pardon me. How many Blades are left now?"
     },
     {
       name: "Arturo",
       statBlock: "Master Thief / CR 5",
       alignment: "NE",
-      wants: "To lead the Silver Skulls and establish a new crime network in Mulmaster; to assess the party as potential assets",
-      knows: "The answers the party seeks about the murder; the operations of the Silver Skulls",
-      voice: "Confident, calculating, speaks from the shadows, admires persistence",
+      wants: "To lead the Silver Skulls and establish a new criminal network in Mulmaster",
+      knows: "The truth behind the murder; the Silver Skulls' operations; has answers the party seeks but won't reveal them yet",
+      voice: "Confident, calculating, speaks from the shadows. Admires persistence and is willing to negotiate.",
       quote: "I admire your persistence. You may call me Arturo; I believe I have the answers that you seek."
     }
   ],
 
   skillChecks: [
     {
-      location: "Part 2, Section 1: The Cistern",
+      location: "Part 2 - Cistern",
       check: "Wis (Perception)",
       dc: "15",
-      success: "Spot the light reflecting off coins and a rucksack 20 ft underwater near the eastern wall"
+      success: "Spot the light reflecting off coins and a rucksack 20 ft below the water surface"
     },
     {
-      location: "Part 2a: Thayan Encounter",
-      check: "Wis (Perception) (passive)",
+      location: "Part 2a - Thayan Encounter",
+      check: "Wis (Perception) [passive]",
       dc: "20",
-      success: "Hear splashing and low voices far enough away to alert the party to proceed quietly"
+      success: "Hear splashing and low voices early enough to alert the party to proceed quietly"
     },
     {
-      location: "Part 2a: Thayan Encounter",
+      location: "Part 2a - Thayan Encounter",
       check: "Int (History) or Int (Arcana)",
       dc: "17",
-      success: "Identify the Thayan wizard's tattoo as pertaining to the school of conjuration"
+      success: "Identify the wizard's forehead tattoo as pertaining to the school of conjuration"
     },
     {
-      location: "Part 2a: Thayan Encounter",
-      check: "Dex (Stealth) (group)",
+      location: "Part 2a - Thayan Encounter",
+      check: "Dex (Stealth) [group]",
       dc: "15",
-      success: "Approach the Thayan group without alerting the veterans to form ranks"
+      success: "Approach without alerting the veterans, who remain split rather than forming ranks"
     },
     {
-      location: "Part 2a: Thayan Encounter",
+      location: "Part 2a - Thayan Encounter",
       check: "Wis (Insight)",
       dc: "12",
-      success: "Confirm that Ravek's claim the City Guard sent him is a lie"
+      success: "Confirm that Ravek's claim about being sent by the City Guard is a lie"
     },
     {
-      location: "Part 2a: Thayan Encounter",
+      location: "Part 2a - Thayan Encounter",
       check: "Cha (Intimidation) or Cha (Persuasion)",
       dc: "17",
       success: "Convince Ravek to back down and allow the party to also search the area"
     },
     {
-      location: "Part 2a: Thayan Encounter (Loot)",
+      location: "Part 2a - Thayan Encounter (Treasure)",
       check: "Int (Investigation)",
       dc: "15",
       success: "Identify the Brotherhood of the Cloak membership token as a fake"
     },
     {
-      location: "Part 2b: Refugee Encounter",
+      location: "Part 2b - Refugee Encounter",
       check: "Cha (Persuasion)",
       dc: "13",
       success: "Convince Zavian to share what little news he has with the party"
     },
     {
-      location: "Part 3: City Guard Encounter",
-      check: "Dex (Stealth) (group)",
+      location: "Part 3 - City Guard",
+      check: "Dex (Stealth) [group]",
       dc: "18",
       success: "Shield the party from view of the guardsmen in the shadows"
     },
     {
-      location: "Part 3: City Guard Encounter",
+      location: "Part 3 - City Guard",
       check: "Cha (Persuasion)",
       dc: "16",
-      success: "Talk past the guards if being truthful about reasons for being in the area"
+      success: "Talk past the City Guard if being truthful about reasons for being in the area"
     },
     {
-      location: "Part 3: City Guard Encounter",
+      location: "Part 3 - City Guard",
       check: "Cha (Deception) or Cha (Intimidation)",
       dc: "20",
-      success: "Convince the guards to leave the party be if not being truthful"
+      success: "Convince the guards to leave the party alone if not being truthful"
     },
     {
-      location: "Part 3: Agents of the Skull (Warehouse)",
+      location: "Part 3 - Warehouse",
       check: "Wis (Perception)",
       dc: "17",
-      success: "Notice cobwebs on the rafters and movement in the adjoining room"
+      success: "Notice cobwebs on rafters and movement in the adjoining room of the warehouse"
     }
   ],
 
@@ -249,7 +249,7 @@ const DATA = {
       name: "Heward's Handy Haversack",
       rarity: "Rare",
       attunement: false,
-      summary: "Backpack with a central pouch (8 cubic ft / 80 lbs) and two side pouches (2 cubic ft / 20 lbs each); always weighs 5 lbs; retrieving an item requires an action and the desired item is always on top."
+      summary: "Backpack with a central pouch (8 cu ft/80 lbs) and two side pouches (2 cu ft/20 lbs each); always weighs 5 lbs; retrieving an item requires an action but the desired item is always on top."
     }
   ],
 
@@ -331,11 +331,11 @@ const DATA = {
       traits: [
         {
           name: "Spellcasting",
-          text: "The conjurer is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The conjurer has the following wizard spells prepared: Cantrips (at will): acid splash, mage hand, poison spray, prestidigitation; 1st level (4 slots): mage armor, magic missile, unseen servant*; 2nd level (3 slots): cloud of daggers*, misty step*, web*; 3rd level (3 slots): fireball, stinking cloud*; 4th level (3 slots): Evard's black tentacles*, stoneskin; 5th level (2 slots): cloudkill*, conjure elemental*. *Conjuration spell of 1st level or higher."
+          text: "The conjurer is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The conjurer has the following wizard spells prepared: Cantrips (at will): acid splash, mage hand, poison spray, prestidigitation. 1st level (4 slots): mage armor, magic missile, unseen servant*. 2nd level (3 slots): cloud of daggers*, misty step*, web*. 3rd level (3 slots): fireball, stinking cloud*. 4th level (3 slots): Evard's black tentacles*, stoneskin. 5th level (2 slots): cloudkill*, conjure elemental*. *Conjuration spell of 1st level or higher."
         },
         {
-          name: "Benign Transportation (Recharges after the Conjurer Casts a Conjuration Spell of 1st Level or Higher)",
-          text: "As a bonus action, the conjurer teleports up to 30 feet to an unoccupied space that it can see. If it instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places."
+          name: "Benign Transportation",
+          text: "Recharges after the Conjurer Casts a Conjuration Spell of 1st Level or Higher. As a bonus action, the conjurer teleports up to 30 feet to an unoccupied space that it can see. If it instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places."
         }
       ],
       actions: [
@@ -369,7 +369,7 @@ const DATA = {
       traits: [
         {
           name: "Spellcasting",
-          text: "The evoker is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The evoker has the following wizard spells prepared: Cantrips (at will): fire bolt*, light*, prestidigitation, ray of frost*; 1st level (4 slots): burning hands*, mage armor, magic missile*; 2nd level (3 slots): mirror image, misty step, shatter*; 3rd level (3 slots): counterspell, fireball*, lightning bolt*; 4th level (3 slots): ice storm*, stoneskin; 5th level (2 slots): Bigby's hand*, cone of cold*; 6th level (1 slot): chain lightning*, wall of ice*. *Evocation spell."
+          text: "The evoker is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The evoker has the following wizard spells prepared: Cantrips (at will): fire bolt*, light*, prestidigitation, ray of frost*. 1st level (4 slots): burning hands*, mage armor, magic missile*. 2nd level (3 slots): mirror image, misty step, shatter*. 3rd level (3 slots): counterspell, fireball*, lightning bolt*. 4th level (3 slots): ice storm*, stoneskin. 5th level (2 slots): Bigby's hand*, cone of cold*. 6th level (1 slot): chain lightning*, wall of ice*. *Evocation spell."
         },
         {
           name: "Sculpt Spells",
@@ -539,5 +539,222 @@ const DATA = {
       int: "10 (+0)",
       wis: "11 (+0)",
       cha: "10 (+0)",
+      saves: "",
+      skills: "Perception +2",
+      resist: "",
+      immune: "",
+      condImmune: "",
+      senses: "passive Perception 12",
+      traits: [],
+      actions: [
+        {
+          name: "Spear",
+          text: "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage."
+        }
+      ]
+    },
+    {
+      name: "Spy",
+      cr: "1",
+      size: "Medium",
+      type: "humanoid (any race)",
+      alignment: "any alignment",
+      ac: "12",
+      hp: "27 (6d8)",
+      speed: "30 ft.",
+      str: "10 (+0)",
+      dex: "15 (+2)",
+      con: "10 (+0)",
+      int: "12 (+1)",
+      wis: "14 (+2)",
+      cha: "16 (+3)",
+      saves: "",
+      skills: "Deception +5, Insight +4, Investigation +5, Perception +6, Persuasion +5, Sleight of Hand +4, Stealth +4",
+      resist: "",
+      immune: "",
+      condImmune: "",
+      senses: "passive Perception 16",
+      traits: [
+        {
+          name: "Cunning Action",
+          text: "On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action."
+        },
+        {
+          name: "Sneak Attack",
+          text: "The spy deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't incapacitated and the spy doesn't have disadvantage on the attack roll."
+        }
+      ],
+      actions: [
+        {
+          name: "Multiattack",
+          text: "The spy makes two melee attacks."
+        },
+        {
+          name: "Shortsword",
+          text: "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) bludgeoning damage."
+        },
+        {
+          name: "Hand Crossbow",
+          text: "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+        }
+      ]
+    },
+    {
+      name: "Master Thief",
+      cr: "5",
+      size: "Medium",
+      type: "humanoid (any race)",
+      alignment: "any alignment",
+      ac: "16 (studded leather)",
+      hp: "84 (13d8 + 26)",
+      speed: "30 ft.",
+      str: "11 (+0)",
+      dex: "18 (+4)",
+      con: "14 (+2)",
+      int: "11 (+0)",
+      wis: "10 (+0)",
+      cha: "12 (+1)",
+      saves: "Dex +7, Int +3",
+      skills: "Acrobatics +7, Athletics +3, Perception +3, Sleight of Hand +7, Stealth +7",
+      resist: "",
+      immune: "",
+      condImmune: "",
+      senses: "passive Perception 13",
+      traits: [
+        {
+          name: "Cunning Action",
+          text: "On each of its turns, the thief can use a bonus action to take the Dash, Disengage, or Hide action."
+        },
+        {
+          name: "Evasion",
+          text: "If the thief is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the thief instead takes no damage if it succeeds on the saving throw, and only half if it fails."
+        },
+        {
+          name: "Sneak Attack",
+          text: "The thief deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the thief that isn't incapacitated and the thief doesn't have disadvantage on the attack roll."
+        }
+      ],
+      actions: [
+        {
+          name: "Multiattack",
+          text: "The thief makes three attacks with its shortsword."
+        },
+        {
+          name: "Shortsword",
+          text: "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 7 (1d6 + 4) bludgeoning damage."
+        },
+        {
+          name: "Light Crossbow",
+          text: "Ranged Weapon Attack: +7 to hit, range 80/320 ft., one target. Hit: 8 (1d8 + 4) piercing damage."
+        }
+      ]
+    },
+    {
+      name: "Gladiator",
+      cr: "5",
+      size: "Medium",
+      type: "humanoid (any race)",
+      alignment: "any alignment",
+      ac: "16 (studded leather, shield)",
+      hp: "112 (15d8 + 45)",
+      speed: "30 ft.",
+      str: "18 (+4)",
+      dex: "15 (+2)",
+      con: "16 (+3)",
+      int: "10 (+0)",
+      wis: "12 (+1)",
+      cha: "15 (+2)",
+      saves: "Str +7, Dex +5, Con +6",
+      skills: "Athletics +10, Intimidation +5",
+      resist: "",
+      immune: "",
+      condImmune: "",
+      senses: "passive Perception 11",
+      traits: [
+        {
+          name: "Brave",
+          text: "The gladiator has advantage on saving throws against being frightened."
+        },
+        {
+          name: "Brute",
+          text: "A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack)."
+        }
+      ],
+      actions: [
+        {
+          name: "Multiattack",
+          text: "The gladiator makes three melee attacks or two ranged attacks."
+        },
+        {
+          name: "Spear",
+          text: "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. and range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack."
+        },
+        {
+          name: "Shield Bash",
+          text: "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+        },
+        {
+          name: "Parry (Reaction)",
+          text: "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+        }
+      ]
+    },
+    {
+      name: "Commoner",
+      cr: "0",
+      size: "Medium",
+      type: "humanoid (any race)",
+      alignment: "any alignment",
+      ac: "10",
+      hp: "4 (1d8)",
+      speed: "30 ft.",
+      str: "10 (+0)",
+      dex: "10 (+0)",
+      con: "10 (+0)",
+      int: "10 (+0)",
+      wis: "10 (+0)",
+      cha: "10 (+0)",
+      saves: "",
+      skills: "",
+      resist: "",
+      immune: "",
+      condImmune: "",
+      senses: "passive Perception 10",
+      traits: [],
+      actions: [
+        {
+          name: "Club",
+          text: "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+        }
+      ]
+    }
+  ],
+
+  bonusA: {
+    title: "Not Used",
+    timing: "N/A",
+    trigger: "N/A",
+    goal: "N/A",
+    failEffect: "N/A",
+    creatures: "None.",
+    mechanics: "N/A",
+    loot: "None.",
+    dmnote: "N/A",
+    chaseComplications: []
+  },
+
+  bonusB: {
+    title: "Not Used",
+    timing: "N/A",
+    trigger: "N/A",
+    goal: "N/A",
+    failPenalty: "None.",
+    creatures: "None.",
+    mechanics: "N/A",
+    loot: "None.",
+    failReward: "None.",
+    dmnote: "N/A"
+  }
+};
 
 module.exports = DATA;

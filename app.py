@@ -43,7 +43,7 @@ app = Flask(__name__)
 
 def _code_from_data_file(data_file: Path) -> str | None:
     try:
-        m = re.search(r"\bcode\s*:\s*[\"']([^\"']+)[\"']",
+        m = re.search(r"\bcode[\"']?\s*:\s*[\"']([^\"']+)[\"']",
                       data_file.read_text(encoding="utf-8"))
         return m.group(1) if m else None
     except OSError:

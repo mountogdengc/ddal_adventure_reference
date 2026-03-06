@@ -308,9 +308,9 @@ def md_to_data(md_path: Path, dry_run: bool = False) -> tuple[bool, str, Path | 
               flush=True)
         t0 = time.monotonic()
         client = _anthropic.Anthropic(api_key=api_key)
-        response = client.messages.create(
+        with client.messages.stream(
             model      = _AI_MODEL,
-            max_tokens = 8192,
+            max_tokens = 32768,
             system     = _SYSTEM_PROMPT,
             messages   = [
                 {
@@ -322,10 +322,14 @@ def md_to_data(md_path: Path, dry_run: bool = False) -> tuple[bool, str, Path | 
                     ),
                 }
             ],
-        )
+        ) as stream:
+            response = stream.get_final_message()
         print("    Claude responded in %s" % _elapsed(t0), flush=True)
     except _anthropic.APIError as exc:
         return False, "Claude API error for %s: %s" % (md_path.name, exc), None
+
+    if response.stop_reason == "max_tokens":
+        return False, "Claude output was truncated (hit max_tokens) for %s" % md_path.name, None
 
     # Pull the raw text out of the response
     raw = response.content[0].text.strip()
@@ -375,7 +379,7 @@ def _get_code_from_data_file(data_file: Path) -> str | None:
     """
     try:
         content = data_file.read_text(encoding="utf-8")
-        match   = re.search(r"\bcode\s*:\s*[\"']([^\"']+)[\"']", content)
+        match   = re.search(r"\bcode[\"']?\s*:\s*[\"']([^\"']+)[\"']", content)
         return match.group(1) if match else None
     except OSError:
         return None
