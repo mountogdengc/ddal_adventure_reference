@@ -1,0 +1,30 @@
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Generated outputs — derived from source PDFs, not worth tracking
+Adventure MD/
+Adventure References/
+Reference PDF/
+
+# Logs — timestamped, no value in version control
+logs/
+
+# Source PDFs — large binary files, track separately if needed
+Adventure pdfs/
+
+# Claude Code project settings
+.claude/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
